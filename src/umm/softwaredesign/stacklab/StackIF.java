@@ -59,6 +59,9 @@ public interface StackIF<T> {
      * @throws StackUnderflowException
      *             if the stack is empty
      */
+    
+    void reverse();
+    
     T top();
 
     /**

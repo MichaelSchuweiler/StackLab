@@ -98,7 +98,7 @@ public class StackTests {
     }
     
     /**
-     * Testing that pushing and popping leaves a 
+     * Testing that ptop()ushing and popping leaves a 
      * stack top element unchanged
      */
     @Test
@@ -211,15 +211,20 @@ public class StackTests {
     }
     
     /**
-     * Testing hasElements after push and pop
+     * Testing hasElements after push );and pop
      */
     @Test
     public void testHasElementsPushPop() {
         ArrayList<String> elements = new ArrayList<String>();
+        
+        
         elements.add("apple");
         elements.add("banana");
+        System.out.print(stackStartsWithElements.toString());
         stackStartsWithElements.pop();
+        System.out.print(stackStartsWithElements.toString());
         assertTrue(stackStartsWithElements.hasElements(elements));
+        System.out.print(stackStartsWithElements.toString());
         stackStartsWithElements.push("tomato");
         elements.add("tomato");
         assertTrue(stackStartsWithElements.hasElements(elements));
@@ -231,6 +236,7 @@ public class StackTests {
     @Test
     public void testToStringEmpty() {
         assertEquals(stackStartsWithNoElements.toString(),"Stack[]");
+        
     }
     
     /**
